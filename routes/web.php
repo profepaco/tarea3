@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\PedidoController;
-use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
 Route::resource('/productos',ProductoController::class);
 require __DIR__.'/auth.php';
+require __DIR__.'/api.php';
